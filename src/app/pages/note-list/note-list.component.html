@@ -9,7 +9,18 @@
       </p>
     </div>
   </div>
-  <div class="notes-list">
-    <app-note-card [title]="'Test one two three'" [body]="'Test Test Test Test'"></app-note-card>
+  <div class="notes-list" [@listAnim]>
+    <app-note-card
+      *ngFor="let note of notes; index as i"
+      [@itemAnim]
+      [link]="i.toString()"
+      [title]="note.title"
+      [body]="note.body"
+      (delete)="deleteNote(i)"
+    />
   </div>
+
+  <button class="button floating-add-button is-primary" routerLink="new">
+    + Add
+  </button>
 </div>
