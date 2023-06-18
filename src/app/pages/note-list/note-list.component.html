@@ -11,7 +11,7 @@
   </div>
   <div class="notes-list" [@listAnim]>
     <app-note-card
-      *ngFor="let note of filteredNotes"
+      *ngFor="let note of notes"
       [@itemAnim]
       [link]="generateNoteUrl(note)"
       [title]="note.title"

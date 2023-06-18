@@ -2,8 +2,8 @@ import {AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, Rende
 
 @Component({
   selector: 'app-note-card',
-  templateUrl: './note-card.component.html',
-  styleUrls: ['./note-card.component.scss']
+  templateUrl: 'note-card.component.html',
+  styleUrls: ['note-card.component.scss']
 })
 export class NoteCardComponent implements AfterViewInit {
   @Input() title?: string;
