@@ -23,11 +23,8 @@ export class NoteCardComponent implements AfterViewInit {
       let style = window.getComputedStyle(this.bodyText.nativeElement);
       let viewableHeight = parseInt(style.getPropertyValue("height"), 10);
       if (this.bodyText.nativeElement.scrollHeight > viewableHeight) {
-        console.log(1)
         this.renderer.setStyle(this.truncator.nativeElement, 'display', 'block');
       } else {
-        console.log(2)
-
         this.renderer.setStyle(this.truncator.nativeElement, 'display', 'none');
       }
     }
