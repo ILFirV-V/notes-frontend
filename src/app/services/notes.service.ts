@@ -42,7 +42,7 @@ export class NotesService {
     let query: string = filterValue.toLowerCase().trim();
     let allResults: Note[] = new Array<Note>();
     //split up the search query into individual words
-    let terms: string[] = query.split(' '); //split on spaces
+    let terms: string[] = query.split(/\W+/);
     //remove duplicate search terms
     terms = this.filterService.removeDuplicates(terms);
     //compile all relevant result into the allResults array
