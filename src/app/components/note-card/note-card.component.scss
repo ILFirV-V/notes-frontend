@@ -26,6 +26,10 @@
       font-size: 22px;
       font-weight: bold;
       color: $purple;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .note-card-body {
